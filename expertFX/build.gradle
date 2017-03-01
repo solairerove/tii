@@ -8,9 +8,6 @@ buildscript {
     }
 }
 
-dependencies {
-    compile 'com.jfoenix:jfoenix:1.0.0'
-}
 apply plugin: 'javafx-gradle-plugin'
 
 

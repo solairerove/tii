@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXListView?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="expertPanel" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.102"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InputController">
-    <JFXListView fx:id="list" layoutY="100.0" prefHeight="300.0" prefWidth="500.0"/>
-    <JFXTextField fx:id="characteristicsTextField" layoutX="140.0" layoutY="6.0"
-                  onKeyPressed="#clickButtonAddCharacteristic"/>
-    <JFXTextField fx:id="subjectsTextField" layoutX="140.0" layoutY="46.0" onKeyPressed="#clickButtonAddSubject"/>
-    <JFXButton fx:id="characteristicsAddButton" layoutX="342.0" layoutY="15.0" mnemonicParsing="false"
-               onAction="#addCharacteristic" prefHeight="38.0" prefWidth="158.0" text="Добавить"/>
-    <JFXButton fx:id="subjectsAddButton" layoutX="342.0" layoutY="55.0" mnemonicParsing="false" onAction="#addSubject"
-               prefHeight="38.0" prefWidth="158.0" text="Добавить"/>
-    <Label layoutX="13.0" layoutY="20.0" text="Характеристики"/>
-    <Label layoutX="27.0" layoutY="60.0" text="Объекты"/>
-    <JFXButton fx:id="cancel" layoutX="0.0" layoutY="400.0" mnemonicParsing="false" onAction="#cancel"
-               prefHeight="100.0" prefWidth="250.0" text="Отмена" style="-fx-font-size:24px;">
-    </JFXButton>
-    <JFXButton fx:id="ok" layoutX="250.0" layoutY="400.0" mnemonicParsing="false" onAction="#saveData"
-               prefHeight="100.0" prefWidth="250.0" text="Сохранить" style="-fx-font-size:24px;">
-    </JFXButton>
-
+<AnchorPane fx:id="expertPanel" prefHeight="500.0000999999975" prefWidth="340.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.InputController">
+  <ListView fx:id="list" layoutX="0.0" layoutY="100.0" prefHeight="210.0" prefWidth="330.0" />
+  <TextField fx:id="characteristicsTextField" layoutX="85.0" layoutY="21.0" onKeyPressed="#clickButtonAddCharacteristic" prefWidth="120.0" />
+  <TextField fx:id="subjectsTextField" layoutX="85.0" layoutY="65.0" onKeyPressed="#clickButtonAddSubject" prefWidth="120.0" />
+  <Button fx:id="characteristicsAddButton" layoutX="230.0" layoutY="17.0" mnemonicParsing="false" onAction="#addCharacteristic" prefHeight="31.0" prefWidth="100.0" text="Add" />
+  <Button fx:id="subjectsAddButton" layoutX="230.0" layoutY="61.0" mnemonicParsing="false" onAction="#addSubject" prefHeight="31.0" prefWidth="100.0" text="Add" />
+  <Label layoutX="12.0" layoutY="24.0" text="Attributes" />
+  <Label layoutX="12.0" layoutY="60.0" text="Objects" />
+  <Button fx:id="cancel" layoutX="12.0" layoutY="328.0" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="120.0" text="Cancel" />
+  <Button fx:id="ok" layoutX="210.0" layoutY="328.0" mnemonicParsing="false" onAction="#saveData" prefHeight="40.0" prefWidth="120.0" text="Save" />
 </AnchorPane>

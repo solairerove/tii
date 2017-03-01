@@ -1,10 +1,10 @@
 package sample;
 
-import com.jfoenix.controls.JFXCheckBox;
-import com.jfoenix.controls.JFXListView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class InputController {
     @FXML
-    public JFXListView<JFXCheckBox> list;
+    public ListView<CheckBox> list;
     public TextField characteristicsTextField;
     public TextField subjectsTextField;
     public Button characteristicsAddButton;
@@ -57,14 +57,14 @@ public class InputController {
     }
 
     public void updateList() {
-        JFXCheckBox jfxToggleButton;
+        CheckBox jfxToggleButton;
         list.getItems().clear();
         if (characteristics.size() > 0 && subjects.size() > 0) {
             for (String subject : subjects)
                 for (String s : characteristics) {
-                    jfxToggleButton = new JFXCheckBox();
+                    jfxToggleButton = new CheckBox();
                     jfxToggleButton.prefWidth(500);
-                    jfxToggleButton.setText(subject + " имеет " + s + "?");
+                    jfxToggleButton.setText("Has " + subject + " got a " + s + "?");
                     list.getItems().add(jfxToggleButton);
                 }
         }
