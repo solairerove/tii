@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
 
 <AnchorPane fx:id="expertPanel" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.102"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExpertController">
-    <JFXButton fx:id="yes" layoutX="0.0" layoutY="75.0" mnemonicParsing="false" onAction="#calculate" prefHeight="125.0"
-               prefWidth="250.0" style="-fx-font-size:24px;" text="Да">
-    </JFXButton>
-    <JFXButton fx:id="no" style="-fx-font-size:24px;" layoutX="250.0" layoutY="75.0" mnemonicParsing="false"
-               onAction="#calculate" prefHeight="125.0" prefWidth="250.0" styleClass="button-raised" text="Нет">
-    </JFXButton>
-    <Label fx:id="question" alignment="TOP_CENTER" layoutX="0.0" layoutY="17.0" prefHeight="35.0" prefWidth="500.0"
-           text="?" style="-fx-font-size:24px;">
-    </Label>
-    <JFXButton fx:id="new" layoutX="0.0" layoutY="200.0" mnemonicParsing="false" onAction="#clear" prefHeight="125.0"
-               prefWidth="250.0" text="Заново" style="-fx-font-size:24px;">
-    </JFXButton>
-    <JFXButton fx:id="input" layoutX="250.0" layoutY="200.0" mnemonicParsing="false" onAction="#nextPane"
-               prefHeight="125.0" prefWidth="250.0" text="Режим обучения" style="-fx-font-size:24px;">
-    </JFXButton>
+
+    <Button layoutY="75.0" mnemonicParsing="false" prefWidth="250.0" prefHeight="125.0" text="Yes"
+            onAction="#calculate"/>
+
+    <Button layoutX="250.0" layoutY="75.0" mnemonicParsing="false" prefWidth="250.0" prefHeight="125.0" text="No"
+            onAction="#calculate"/>
+
+    <Label fx:id="question" alignment="TOP_CENTER" layoutY="17.0" prefHeight="35.0" prefWidth="500.0" text="?"/>
+
+    <Button layoutY="200.0" mnemonicParsing="false" prefWidth="250.0" prefHeight="125.0" text="Again"
+            onAction="#clear"/>
+
+    <Button layoutX="250.0" layoutY="200.0" mnemonicParsing="false" prefWidth="250.0" prefHeight="125.0"
+            text="Experience" onAction="#nextPane"/>
+
 </AnchorPane>

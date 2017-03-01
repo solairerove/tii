@@ -132,12 +132,11 @@ public class Data {
         removeRowsWithAllZero();
         String result;
         if (M == 1) {
-            result = "Результат - " + subjects.get(0);
+            result = "Result is - " + subjects.get(0);
         } else {
-            result = "Есть " + characteristics.get(getMinIndex()) + "?";
+            result = "Has it got " + characteristics.get(getMinIndex()) + "?";
         }
 
         return result;
     }
-
 }
