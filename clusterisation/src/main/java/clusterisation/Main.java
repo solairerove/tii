@@ -29,19 +29,19 @@ public class Main extends Applet implements Runnable {
         rand = new Random();
         Centroids = new Vector<Quad>();
 
-        RestartButton = new Button("Сброс центров");
+        RestartButton = new Button("Discard centres");
         add(RestartButton);
         RestartButton.setEnabled(false);
 
-        ResetButton = new Button("Сброс точек");
+        ResetButton = new Button("Discard points");
         add(ResetButton);
         ResetButton.setEnabled(false);
 
-        RunButton = new Button("Старт");
+        RunButton = new Button("Start");
         add(RunButton);
         RunButton.setEnabled(false);
 
-        DrawGButton = new Button("Разместить точки");
+        DrawGButton = new Button("Locate points");
         add(DrawGButton);
 
         CrossList = new Vector<Cross>();
@@ -86,10 +86,10 @@ public class Main extends Applet implements Runnable {
                 t = Centroids.elementAt(i);
 
                 t.draw(g);
-//                if (algorithm.getState()) {
-//                    g.setColor(t.color);
-//                    g.drawOval(t.x - R, t.y - R, R * 2, R * 2);
-//                }
+                if (algorithm.getState()) {
+                    g.setColor(t.color);
+                    g.drawOval(t.x - R, t.y - R, R * 2, R * 2);
+                }
             }
         }
         g.setColor(Color.black);
